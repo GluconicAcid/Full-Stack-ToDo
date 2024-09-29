@@ -19,6 +19,10 @@ app.use(cookieParser());
 
 //routes import and declaration
 
+import userRouter from './routes/user.route.js'
+import taksRouter from './routes/task.route.js'
 
+app.use("/api/v1/users", userRouter);
+app.use("/api/v1/tasks", taksRouter);
 
 export { app }

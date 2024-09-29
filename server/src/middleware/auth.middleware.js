@@ -20,6 +20,6 @@ export const verifyJWT = async(req, res, next) => {
         req.user = user;
         next();
     } catch (error) {
-        throw res.status(401).json({message: error?.message || "Invalid access token"});
+        return res.status(401).json({message: error?.message || "Invalid access token"});
     }
 }
